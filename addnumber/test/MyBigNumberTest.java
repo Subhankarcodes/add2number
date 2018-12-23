@@ -28,50 +28,34 @@ public class MyBigNumberTest implements IReceiver{
      */
     @Test
     public void testSum_N1() {
-        try{
             MyBigNumberTest test = new MyBigNumberTest();
             MyBigNumber mybignumber = new MyBigNumber(test);
             String result = mybignumber.sum("223", "444");
             assertEquals("667", result);
-        }catch(ExNumberFormatException ex){
-            System.out.printf("Vị trí của lỗi : ", ex);
-        }
     }
     
     @Test
     public void testSum_N2() {
-        try{
             MyBigNumberTest test = new MyBigNumberTest();
             MyBigNumber mybignumber = new MyBigNumber(test);
             String result = mybignumber.sum("15", "867");
-            assertEquals("882", result);
-        }catch(ExNumberFormatException ex){
-            System.out.printf("Vị trí của lỗi : ", ex);
-        }
+            assertEquals("882", result);       
     }
     
     @Test
     public void testSum_N3() {
-        try{
             MyBigNumberTest test = new MyBigNumberTest();
             MyBigNumber mybignumber = new MyBigNumber(test);
             String result = mybignumber.sum("1115", "82");
-            assertEquals("1197", result);
-        }catch(ExNumberFormatException ex){
-            System.out.printf("Vị trí của lỗi : ", ex);
-        }
+            assertEquals("1197", result);       
     }
     
     @Test
     public void testSum_N4() {
-        try{
             MyBigNumberTest test = new MyBigNumberTest();
             MyBigNumber mybignumber = new MyBigNumber(test);
             String result = mybignumber.sum("","0");
-            assertEquals("0", result);
-        }catch(ExNumberFormatException ex){
-            System.out.printf("Vị trí của lỗi : ", ex);
-        }
+            assertEquals("0", result);      
     }
     
     @Test
@@ -131,38 +115,27 @@ public class MyBigNumberTest implements IReceiver{
     
     @Test
     public void testSum_N10() {
-        try{
-            MyBigNumberTest test = new MyBigNumberTest();
+        MyBigNumberTest test = new MyBigNumberTest();
             MyBigNumber mybignumber = new MyBigNumber(test);
             String result = mybignumber.sum("0", "0");
          assertEquals("0", result);
-        }catch(ExNumberFormatException ex){
-            System.out.printf("Vị trí của lỗi : ", ex);
-        }
+        
     }
     
      @Test
     public void testSum_N11() {
-        try{
             MyBigNumberTest test = new MyBigNumberTest();
             MyBigNumber mybignumber = new MyBigNumber(test);
             String result = mybignumber.sum("453453", "");
-         assertEquals("453453", result);
-        }catch(ExNumberFormatException ex){
-            System.out.printf("Vị trí của lỗi : ", ex);
-        }
+         assertEquals("453453", result);      
     }
     
      @Test
     public void testSum_N12() {
-        try{
             MyBigNumberTest test = new MyBigNumberTest();
             MyBigNumber mybignumber = new MyBigNumber(test);
             String result = mybignumber.sum("", "");
-         assertEquals("", result);
-        }catch(ExNumberFormatException ex){
-            System.out.printf("Vị trí của lỗi : ", ex);
-        }
+         assertEquals("", result);       
     }
     
      @Test
