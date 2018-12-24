@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Admin
+ * @author tri duong
  */
 public class MyBigNumberTest implements IReceiver{
     
