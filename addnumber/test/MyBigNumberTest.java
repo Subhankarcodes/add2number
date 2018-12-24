@@ -8,10 +8,6 @@ package testcase;
 import addnumber.ExNumberFormatException;
 import addnumber.IReceiver;
 import addnumber.MyBigNumber;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -226,6 +222,47 @@ public class MyBigNumberTest implements IReceiver{
             System.out.printf("Vị trí của lỗi : ", ex);
         }
     }
+    
+    @Test
+    public void testSum_N21() {
+        try{
+            MyBigNumberTest test = new MyBigNumberTest();
+            MyBigNumber mybignumber = new MyBigNumber(test);
+            String result = mybignumber.sum("1a2", "1");
+        }catch(ExNumberFormatException ex){
+            System.out.printf("Vị trí của lỗi : ", ex);
+        }
+    }
+    
+    @Test
+    public void testSum_N22() {
+        try{
+            MyBigNumberTest test = new MyBigNumberTest();
+            MyBigNumber mybignumber = new MyBigNumber(test);
+            String result = mybignumber.sum("1", "1a2");
+        }catch(ExNumberFormatException ex){
+            System.out.printf("Vị trí của lỗi : ", ex);
+        }
+    }
+    
+     @Test
+    public void testSum_N23() {
+            MyBigNumberTest test = new MyBigNumberTest();
+            MyBigNumber mybignumber = new MyBigNumber(test);
+            String result = mybignumber.sum("","1");
+            assertEquals("1", result);      
+    }
+    
+     @Test
+    public void testSum_N24() {
+            MyBigNumberTest test = new MyBigNumberTest();
+            MyBigNumber mybignumber = new MyBigNumber(test);
+            String result = mybignumber.sum("1","");
+            assertEquals("1", result);      
+    }
+    
+    
+    
     
     @Override
     public void send(String msg) {
